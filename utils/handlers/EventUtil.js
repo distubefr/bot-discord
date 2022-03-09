@@ -10,9 +10,9 @@ module.exports = async client => {
         const event = require(eventFile);
 
         if (event.once) {
-            client.once(event.nane, (...args) => event.execute(client, ...args));
+            client.once(event.name, (...args) => event.execute(client, ...args));
         } else {
-            client.on(event.nane, (...args) => event.execute(client, ...args));
+            client.on(event.name, (...args) => event.execute(client, ...args));
         }
     })
 }
