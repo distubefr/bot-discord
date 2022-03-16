@@ -15,7 +15,7 @@ module.exports = {
         .setFooter({ text: `Nouveau sondage généré par ${message.author.tag}!`})
 
 
-    const poll = await message.reply({ embeds: [embed] });
+    const poll = await message.channel.send({ embeds: [embed] });
     poll.react('<:check:953734946344824924>')
     poll.react('<:x_:953735550442016818>')
   },

@@ -20,7 +20,7 @@ module.exports = {
             .setTimestamp()
             .setFooter({ text: 'L\'utilisateur a rejoint!'});
 
-        const logChannel = client.channels.cache.get('932007171321888828');
+        const logChannel = client.channels.cache.get('927083139367596042');
         logChannel.send({ embeds: [embed] });
     },
 };
