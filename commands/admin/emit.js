@@ -7,7 +7,11 @@ module.exports = {
       if (args[0] == 'guildMemberAdd') {
         client.emit('guildMemberAdd', message.member);
         message.reply('Event guildMemberAdd émit!')
-      } else {
+      } else if (args[0] == 'guildCreate') {
+        client.emit('guildCreate', message.guild);
+        message.reply('Event guildMemberAdd émit!')        
+      }
+      else {
         client.emit('guildMemberRemove', message.member);
         message.reply('Event guildMemberRemove émit!')
       }
@@ -24,6 +28,10 @@ module.exports = {
         value: 'guildMemberAdd'
       },
       {
+        name: 'guildCreate',
+        value: 'guildCreate'
+      },
+      {
         name: 'guildMemberRemove',
         value: 'guildMemberRemove'
       },
@@ -36,6 +44,9 @@ module.exports = {
     if (evtChoices == 'guildMemberAdd') {
       client.emit('guildMemberAdd', interaction.member);
       interaction.reply({ content: 'Event guildMemberAdd émit!', ephemereal: true})
+    } else if (evtChoices == 'guildCreate') {
+      client.emit('guildCreate', interaction.guild);
+      interaction.reply({content: 'Event guildCreate émit!', ephemereal: true})        
     } else {
       client.emit('guildMemberRemove', interaction.member);
       interaction.reply({ content: 'Event guildMemberRemove émit!', ephemereal: true})
