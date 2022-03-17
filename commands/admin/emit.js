@@ -43,7 +43,7 @@ module.exports = {
 
     if (evtChoices == 'guildMemberAdd') {
       client.emit('guildMemberAdd', interaction.member);
-      interaction.reply({ content: 'Event guildMemberAdd émit!', ephemereal: true})
+      interaction.reply({ content: 'Event guildMemberAdd émit!', ephemeral: true})
     } else if (evtChoices == 'guildCreate') {
       client.emit('guildCreate', interaction.guild);
       interaction.reply({content: 'Event guildCreate émit!', ephemeral: true})        

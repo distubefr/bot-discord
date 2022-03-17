@@ -1,5 +1,4 @@
 const { MessageEmbed} = require('discord.js');
-const dayjs = require('dayjs')
 
 module.exports = {
     name: 'guildMemberAdd' ,
