@@ -2,6 +2,7 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = {
     name: 'poll',
+    permissions: ['ADMINISTRATOR'],
     description: 'Poster votre propre sondage!',
     async run(client, message, args) {
       if (!args[0]) return message.reply('Merci d\'entrer une question pour voter question pour votre sondage');
@@ -33,7 +34,7 @@ module.exports = {
     required: true,
    }
   ],
-  async runSlash(client, interaction, args) {
+  async runInteraction(client, interaction, args) {
     const pollTitle = interaction.options.getString('title');
     const pollContent = interaction.options.getString('content');
 
