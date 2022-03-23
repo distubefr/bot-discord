@@ -2,6 +2,7 @@ const prefix = '!';
 
 module.exports = {
     name: 'messageCreate' ,
+    permissions: 'ADMINISTRATOR',
     once: false,
     execute(client, message) {
         if (message.author.bot) return;

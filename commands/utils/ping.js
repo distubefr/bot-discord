@@ -2,12 +2,13 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = {
     name: 'ping',
+    category: 'utils',
     permissions: ['ADMINISTRATOR'],
     description: 'Commande ping!',
     async run(client, message, args) {
       const tryPong = await message.channel.send("On essaye de pong... un instant!");
 
-      const embed  = new MessageEmbed()
+      const embed = new MessageEmbed()
         .setTitle('🏓 Pong!')
         .setThumbnail(client.user.displayAvatarURL())
         .addFields(

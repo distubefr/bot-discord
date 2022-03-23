@@ -1,15 +1,16 @@
 const { promisify } = require('util');
 const { glob } = require('glob');
-const { permissions } = require('../../commands/utils/ping');
 const pGlob = promisify(glob);
 
 module.exports = async (client) => {
     (await pGlob(`${process.cwd()}/commands/*/*.js`)).map(async (cmdFile) => {
         const cmd = require(cmdFile);
 
-         if (!cmd.name || !cmd.description && cmd.type != 'USER') return console.log();
+         if (!cmd.name || !cmd.description && cmd.type != 'USER') return console.log(`-----\nCommande non-chargée: pas de nom et/ou description\nFichier -> ${cmdFile}\n-----`);
 
-         if (!cmd.permissions) return console.log(`-----\nCommande non-chargée: pas de permissions\nFichier -> ${cmdFile}\n-----`)
+         if (!cmd.category) return console.log(`-----\nCommande non-chargée: pas de catégorie\nFichier -> ${cmdFile}\n-----`);
+
+         if (!cmd.permissions) return console.log(`-----\nCommande non-chargée: pas de permissions\nFichier -> ${cmdFile}\n-----`);
 
          cmd.permissions.forEach(permission => {
              if(!permissionList.includes(permission)) {

@@ -2,7 +2,8 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = {
     name: 'userinfo',
-    permissions: ['ADMINISTRATOR'],
+    category: 'users',
+    permissions: ['SPEAK'],
     type: 'USER',
     async runInteraction(client, interaction, args) {
     const member = await interaction.guild.members.fetch(interaction.targetId); 
