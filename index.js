@@ -16,11 +16,11 @@ process.on("exit", (code) => {
 });
 process.on("uncaughtException", (err, origin) => {
   Logger.error(`UNCAUGHT_EXCEPTION: ${err}`);
-  console.error(`Origine: ${origin}`)
+  console.error(`Origine: ${origin}`);
 });
 process.on("unhandledRejection", (reason, promise) => {
   Logger.warn(`UNHANDLEDREJECTION: ${reason}`);
-  console.log(promise)
+  console.log(promise);
 });
 process.on("warning", (...args) => Logger.warn(...args));
 

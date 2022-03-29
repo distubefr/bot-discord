@@ -40,7 +40,7 @@ module.exports = {
         {
           name: "Commande Ban",
           value: `Commande Modération !\nFaire des sondages au choix. Utilisation : !ban [@member] [reason] ou /ban [@member] [reason]`,
-        },
+        }
       )
       .setTimestamp()
       .setFooter({
@@ -52,44 +52,44 @@ module.exports = {
   },
   async runInteraction(client, interaction, args) {
     const embed = new MessageEmbed()
-    .setTitle("Liste des commandes!")
-    .setThumbnail(client.user.displayAvatarURL())
-    .addFields(
-      {
-        name: "Commande Ping",
-        value: `Commande Utilisation !\nVous envoie la latence du bot et de l'API. Utilisation : !ping ou /ping`,
-      },
-      {
-        name: "Commande Userinfo",
-        value: `Commande Utilisation !\nSavoir les informations du bot ou du membre. Utilisation : Clic gauche sur la personne Applications Userinfo`,
-      },
-      {
-        name: "Commande Emit",
-        value: `Commande Administrateur !\nEmmetre un évenement au choix. Utilisation : !emit ou /emit`,
-      },
-      {
-        name: "Commande Poll",
-        value: `Commande Modération !\nFaire des sondages au choix. Utilisation : !poll [content] ou /poll [title] [content]`,
-      },
-      {
-        name: "Commande Clear",
-        value: `Commande Modération !\nFaire des sondages au choix. Utilisation : !clear [nomber] [@member] ou /clear [nomber] [@member]`,
-      },
-      {
-        name: "Commande Kick",
-        value: `Commande Modération !\nFaire des sondages au choix. Utilisation : !kick [@member] [reason] ou /kick [@member] [reason]`,
-      },
-      {
-        name: "Commande Ban",
-        value: `Commande Modération !\nFaire des sondages au choix. Utilisation : !ban [@member] [reason] ou /ban [@member] [reason]`,
-      },
-    )
-    .setTimestamp()
-    .setFooter({
-      text: interaction.user.username,
-      iconURL: interaction.user.displayAvatarURL(),
-    });
+      .setTitle("Liste des commandes!")
+      .setThumbnail(client.user.displayAvatarURL())
+      .addFields(
+        {
+          name: "Commande Ping",
+          value: `Commande Utilisation !\nVous envoie la latence du bot et de l'API. Utilisation : !ping ou /ping`,
+        },
+        {
+          name: "Commande Userinfo",
+          value: `Commande Utilisation !\nSavoir les informations du bot ou du membre. Utilisation : Clic gauche sur la personne Applications Userinfo`,
+        },
+        {
+          name: "Commande Emit",
+          value: `Commande Administrateur !\nEmmetre un évenement au choix. Utilisation : !emit ou /emit`,
+        },
+        {
+          name: "Commande Poll",
+          value: `Commande Modération !\nFaire des sondages au choix. Utilisation : !poll [content] ou /poll [title] [content]`,
+        },
+        {
+          name: "Commande Clear",
+          value: `Commande Modération !\nFaire des sondages au choix. Utilisation : !clear [nomber] [@member] ou /clear [nomber] [@member]`,
+        },
+        {
+          name: "Commande Kick",
+          value: `Commande Modération !\nFaire des sondages au choix. Utilisation : !kick [@member] [reason] ou /kick [@member] [reason]`,
+        },
+        {
+          name: "Commande Ban",
+          value: `Commande Modération !\nFaire des sondages au choix. Utilisation : !ban [@member] [reason] ou /ban [@member] [reason]`,
+        }
+      )
+      .setTimestamp()
+      .setFooter({
+        text: interaction.user.username,
+        iconURL: interaction.user.displayAvatarURL(),
+      });
 
-  interaction.reply({ embeds: [embed] });
+    interaction.reply({ embeds: [embed] });
   },
 };
