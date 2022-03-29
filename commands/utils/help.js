@@ -15,7 +15,7 @@ module.exports = {
       .addFields(
         {
           name: "Commande Ping",
-          value: `Commande Utilisation !\nVous envoie la latence du bot et de l'API. Utilisation : !ping ou /ping`,
+          value: `Commande Utilisation !\nSavoir la latence du bot!. Utilisation : !ping ou /ping`,
         },
         {
           name: "Commande Userinfo",
@@ -27,20 +27,24 @@ module.exports = {
         },
         {
           name: "Commande Poll",
-          value: `Commande Modération !\nFaire des sondages au choix. Utilisation : !poll [content] ou /poll [title] [content]`,
+          value: `Commande Modération !\nPoster votre propre sondage! Utilisation : !poll [content] ou /poll [title] [content]`,
         },
         {
           name: "Commande Clear",
-          value: `Commande Modération !\nFaire des sondages au choix. Utilisation : !clear [nomber] [@member] ou /clear [nomber] [@member]`,
+          value: `Commande Modération !\nEmettre un événement au choix! Utilisation : !clear [nomber] [@member] ou /clear [nomber] [@member]`,
         },
         {
           name: "Commande Kick",
-          value: `Commande Modération !\nFaire des sondages au choix. Utilisation : !kick [@member] [reason] ou /kick [@member] [reason]`,
+          value: `Commande Modération !\nKick un utilisateur avec raison! Utilisation : !kick [@member] [reason] ou /kick [@member] [reason]`,
         },
         {
           name: "Commande Ban",
-          value: `Commande Modération !\nFaire des sondages au choix. Utilisation : !ban [@member] [reason] ou /ban [@member] [reason]`,
-        }
+          value: `Commande Modération !\nBanir un utilisateur avec raison! Utilisation : !ban [@member] [reason] ou /ban [@member] [reason]`,
+        },
+        {
+          name: "Commande Softban",
+          value: `Commande Modération !\nBanir un utilisateur temporairement avec raison! Utilisation : !softban [@member] [reason] ou /ban [@member] [reason]`,
+        },
       )
       .setTimestamp()
       .setFooter({
@@ -57,7 +61,7 @@ module.exports = {
       .addFields(
         {
           name: "Commande Ping",
-          value: `Commande Utilisation !\nVous envoie la latence du bot et de l'API. Utilisation : !ping ou /ping`,
+          value: `Commande Utilisation !\nSavoir la latence du bot!. Utilisation : !ping ou /ping`,
         },
         {
           name: "Commande Userinfo",
@@ -69,20 +73,24 @@ module.exports = {
         },
         {
           name: "Commande Poll",
-          value: `Commande Modération !\nFaire des sondages au choix. Utilisation : !poll [content] ou /poll [title] [content]`,
+          value: `Commande Modération !\nPoster votre propre sondage! Utilisation : !poll [content] ou /poll [title] [content]`,
         },
         {
           name: "Commande Clear",
-          value: `Commande Modération !\nFaire des sondages au choix. Utilisation : !clear [nomber] [@member] ou /clear [nomber] [@member]`,
+          value: `Commande Modération !\nEmettre un événement au choix! Utilisation : !clear [nomber] [@member] ou /clear [nomber] [@member]`,
         },
         {
           name: "Commande Kick",
-          value: `Commande Modération !\nFaire des sondages au choix. Utilisation : !kick [@member] [reason] ou /kick [@member] [reason]`,
+          value: `Commande Modération !\nKick un utilisateur avec raison! Utilisation : !kick [@member] [reason] ou /kick [@member] [reason]`,
         },
         {
           name: "Commande Ban",
-          value: `Commande Modération !\nFaire des sondages au choix. Utilisation : !ban [@member] [reason] ou /ban [@member] [reason]`,
-        }
+          value: `Commande Modération !\nBanir un utilisateur avec raison! Utilisation : !ban [@member] [reason] ou /ban [@member] [reason]`,
+        },
+        {
+          name: "Commande Softban",
+          value: `Commande Modération !\nBanir un utilisateur temporairement avec raison! Utilisation : !softban [@member] [reason] ou /ban [@member] [reason]`,
+        },
       )
       .setTimestamp()
       .setFooter({

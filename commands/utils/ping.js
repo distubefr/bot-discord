@@ -4,7 +4,7 @@ module.exports = {
   name: "ping",
   category: "utils",
   permissions: ["ADMINISTRATOR"],
-  description: "Commande ping!",
+  description: "Savoir la latence du bot!",
   async run(client, message, args) {
     const tryPong = await message.channel.send(
       "On essaye de pong... un instant!"
