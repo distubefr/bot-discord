@@ -50,7 +50,7 @@ module.exports = {
         text: `Nouveau sondage généré par ${interaction.user.tag}`,
       });
 
-    const poll = await interaction.reply({ embeds: [embed], fetchReply: true });
+    const poll = await interaction.reply({ embeds: [embed], content: '\@Fondateur\t', fetchReply: true });
     poll.react("<:check:953734946344824924>");
     poll.react("<:x_:953735550442016818>");
   },
