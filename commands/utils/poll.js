@@ -3,25 +3,10 @@ const { MessageEmbed } = require("discord.js");
 module.exports = {
   name: "poll",
   category: "utils",
-  permissions: ["KICK_MEMBERS"],
+  permissions: [""],
   description: "Poster votre propre sondage!",
   async run(client, message, args) {
-    if (!args[0])
-      return message.reply(
-        "Merci d'entrer une question pour voter question pour votre sondage"
-      );
-
-    const embed = new MessageEmbed()
-
-      .setTitle("Sondage")
-      .setColor("#00a3b5")
-      .setDescription(args.slice(0).join(" "))
-      .setTimestamp()
-      .setFooter({ text: `Nouveau sondage généré par ${message.author.tag}!` });
-
-    const poll = await message.channel.send({ embeds: [embed] });
-    poll.react("<:check:953734946344824924>");
-    poll.react("<:x_:953735550442016818>");
+    
   },
   options: [
     {
